@@ -1,53 +1,24 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Med
-  Date: 3/4/2025
-  Time: 4:37 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN dashboard</title>
+    <%@ include file="includes/navbar.jsp" %>
 </head>
-<body>
+<body class="bg-gray-100">
+<div class="container mx-auto p-6">
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h1 class="text-3xl font-bold text-center mb-6">Welcome, ${utilisateur.nomUtilisateur}</h1>
+        <ul class="space-y-4 text-xl">
+            <li><a href="candidat?action=listOffres" class="text-blue-500 hover:underline">listes des recruteurs</a></li>
+            <li><a href="candidat?action=listCandidatures" class="text-blue-500 hover:underline">listes des candidats</a></li>
+            <li><a href="candidat?action=listCandidatures" class="text-blue-500 hover:underline">confirmation des offres</a></li>
+            <li><a href="candidat?action=listCandidatures" class="text-blue-500 hover:underline">confirmation des candidatures</a></li>
 
-
-<%@ page import="com.example.smartrecrute.models.Utilisateur" %><%--
-  Created by IntelliJ IDEA.
-  User: Med
-  Date: 3/4/2025
-  Time: 3:56 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-
-
-
-<%
-    Utilisateur utilisateur = (Utilisateur) request.getSession().getAttribute("utilisateur");
-%>
-
-hello
-<%= utilisateur.getEmail() %> <br>
-<%= utilisateur.getRole() %>
-<%= utilisateur.getRole() %>
-
-
-<form action="auth?action=logout" method="post">
-    <button type="submit">logout</button>
-</form>
-</body>
-</html>
-
-
-
-
+        </ul>
+    </div>
+</div>
 </body>
 </html>

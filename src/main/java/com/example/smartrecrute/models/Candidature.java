@@ -1,40 +1,37 @@
+
 package com.example.smartrecrute.models;
 
 import java.sql.Timestamp;
 import java.util.List;
 
-public class Candidature  {
+public class Candidature {
     private int id;
     private int candidatId;
     private int offreId;
     private String statut;
+    private String message;
+    private Utilisateur utilisateur;
+    List<OffreEmploi> offreEmplois;
+    private Timestamp dateCandidature;
 
     public String getMessage() {
-        return message;
+        return this.message;
     }
 
     public void setMessage(String message) {
         this.message = message;
     }
 
-    private String message;
-    private Utilisateur utilisateur;
-    List<OffreEmploi> offreEmplois;
-
-
     public List<OffreEmploi> getOffreEmplois() {
-        return offreEmplois;
+        return this.offreEmplois;
     }
 
     public void setOffreEmplois(List<OffreEmploi> offreEmplois) {
         this.offreEmplois = offreEmplois;
     }
 
-    private Timestamp dateCandidature;
-
-
     public Utilisateur getUtilisateur() {
-        return utilisateur;
+        return this.utilisateur;
     }
 
     public void setUtilisateur(Utilisateur utilisateur) {
@@ -58,21 +55,15 @@ public class Candidature  {
         this.dateCandidature = dateCandidature;
     }
 
-    public Candidature(int candidatId, int offreId, String statut) {
+    public Candidature(int id, int candidatId, Timestamp dateCandidature, String statut) {
+        this.id = id;
         this.candidatId = candidatId;
-        this.offreId = offreId;
-        this.statut = statut;
-    }
-
-    public Candidature(int candidatId, int offreId, String statut, Timestamp dateCandidature) {
-        this.candidatId = candidatId;
-        this.offreId = offreId;
         this.statut = statut;
         this.dateCandidature = dateCandidature;
     }
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -80,7 +71,7 @@ public class Candidature  {
     }
 
     public int getCandidatId() {
-        return candidatId;
+        return this.candidatId;
     }
 
     public void setCandidatId(int candidatId) {
@@ -88,7 +79,7 @@ public class Candidature  {
     }
 
     public int getOffreId() {
-        return offreId;
+        return this.offreId;
     }
 
     public void setOffreId(int offreId) {
@@ -96,7 +87,7 @@ public class Candidature  {
     }
 
     public String getStatut() {
-        return statut;
+        return this.statut;
     }
 
     public void setStatut(String statut) {
@@ -104,7 +95,7 @@ public class Candidature  {
     }
 
     public Timestamp getDateCandidature() {
-        return dateCandidature;
+        return this.dateCandidature;
     }
 
     public void setDateCandidature(Timestamp dateCandidature) {

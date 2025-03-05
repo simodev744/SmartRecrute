@@ -54,7 +54,7 @@ public class DBConnection {
                 "candidature_id INT NOT NULL," +
                 "PRIMARY KEY (offre_id, candidature_id)," +
                 "FOREIGN KEY (offre_id) REFERENCES offres_emploi(id)," +
-                "FOREIGN KEY (candidature_id) REFERENCES candidatures(id)" +
+                "FOREIGN KEY (candidature_id) REFERENCES candidatures(id) ON DELETE CASCADE ON UPDATE CASCADE" +
                 ")";
 
 

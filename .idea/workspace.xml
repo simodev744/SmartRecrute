@@ -10,26 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1793b39-1c67-4381-bdb7-bf36ea3d971a" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/RecruteurDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/dashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/includes/navbar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/recruteur/createOffre.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/recruteur/editOffre.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/recruteur/includes/navbar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/recruteur/listCandidatures.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/recruteur/listOffres.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/recruteur/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SmartRecrute_war_exploded.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/upload/PdfUploadServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/candidaturesConfirmation.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/includes/navbar.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/listCandidat.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/offresConfirmation.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoAdmin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoAdmin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/crud.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/recruteur/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/listOffres.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/recruteur/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/profile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/recruteur/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/editProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/recruteur/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/listCandidatures.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/recruteur/show.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/connection/DBConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/connection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/connection/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/auth/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/auth/AuthServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/candidat/CandidatServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/candidat/CandidatServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/recruteur/RecruteurServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/recruteur/RecruteurServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoCandidat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoCandidat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/RecruteurDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/RecruteurDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Utilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/editProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/editProfile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/includes/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/includes/navbar.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/listCandidatures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/listCandidatures.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/listOffres.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/listOffres.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/profile.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +51,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -75,32 +80,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Tomcat Server.Tomcat 11.0.2.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MCOMPUTER/Desktop/SmartRecrute/src/main/webapp/candidat&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 11.0.2.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/MCOMPUTER/Desktop/SmartRecrute/src/main/webapp/admin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MCOMPUTER\Desktop\SmartRecrute\src\main\webapp\admin" />
       <recent name="C:\Users\MCOMPUTER\Desktop\SmartRecrute\src\main\webapp\candidat" />
+      <recent name="C:\Users\MCOMPUTER\Desktop\SmartRecrute\src\main\webapp" />
+      <recent name="C:\Users\MCOMPUTER\Desktop\SmartRecrute\target\classes\com\example" />
       <recent name="C:\Users\Med\Desktop\SmartRecrute\src\main\webapp\candidat" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MCOMPUTER\Desktop\SmartRecrute\src\main\webapp\admin" />
+      <recent name="C:\Users\MCOMPUTER\Desktop\SmartRecrute\src\main\webapp\candidat" />
       <recent name="C:\Users\MCOMPUTER\Desktop\SmartRecrute" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -251,6 +261,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value=" fix des erreurs et ajout candidatdao et modification des jsps et les servelts recruteur et candidat" />
+    <MESSAGE value=" fix des erreurs et ajout candidatdao et modification des jsps et les servelts recruteur et candidat" />
+    <option name="LAST_COMMIT_MESSAGE" value=" fix des erreurs et ajout candidatdao et modification des jsps et les servelts recruteur et candidat" />
   </component>
 </project>

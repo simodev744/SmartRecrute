@@ -1,3 +1,8 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package com.example.smartrecrute.models;
 
 import java.io.Serializable;
@@ -9,11 +14,12 @@ public class Utilisateur implements Serializable {
     private String motDePasse;
     private String email;
     private String cv;
-
-     private Candidature candidature;
+    private Candidature candidature;
+    private String role;
+    private Timestamp dateCreation;
 
     public Candidature getCandidature() {
-        return candidature;
+        return this.candidature;
     }
 
     public void setCandidature(Candidature candidature) {
@@ -21,7 +27,7 @@ public class Utilisateur implements Serializable {
     }
 
     public Timestamp getDateCreation() {
-        return dateCreation;
+        return this.dateCreation;
     }
 
     public void setDateCreation(Timestamp dateCreation) {
@@ -29,7 +35,7 @@ public class Utilisateur implements Serializable {
     }
 
     public String getCv() {
-        return cv;
+        return this.cv;
     }
 
     public void setCv(String cv) {
@@ -44,17 +50,22 @@ public class Utilisateur implements Serializable {
         this.role = role;
     }
 
-    public Utilisateur( String email, String nomUtilisateur, String role,String cv) {
+    public Utilisateur(String email, String nomUtilisateur, String role, String cv) {
         this.nomUtilisateur = nomUtilisateur;
         this.email = email;
         this.role = role;
         this.cv = cv;
-
     }
 
-
-    private String role;
-    private Timestamp dateCreation;
+    public Utilisateur(int id, String nomUtilisateur, String motDePasse, String email, String cv, String role, Timestamp dateCreation) {
+        this.id = id;
+        this.nomUtilisateur = nomUtilisateur;
+        this.motDePasse = motDePasse;
+        this.email = email;
+        this.cv = cv;
+        this.role = role;
+        this.dateCreation = dateCreation;
+    }
 
     public Utilisateur(int id, String nomUtilisateur, String motDePasse, String email, String role, Timestamp dateCreation) {
         this.id = id;
@@ -65,9 +76,8 @@ public class Utilisateur implements Serializable {
         this.dateCreation = dateCreation;
     }
 
-
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -75,7 +85,7 @@ public class Utilisateur implements Serializable {
     }
 
     public String getNomUtilisateur() {
-        return nomUtilisateur;
+        return this.nomUtilisateur;
     }
 
     public void setNomUtilisateur(String nomUtilisateur) {
@@ -83,7 +93,7 @@ public class Utilisateur implements Serializable {
     }
 
     public String getMotDePasse() {
-        return motDePasse;
+        return this.motDePasse;
     }
 
     public void setMotDePasse(String motDePasse) {
@@ -91,7 +101,7 @@ public class Utilisateur implements Serializable {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -99,7 +109,7 @@ public class Utilisateur implements Serializable {
     }
 
     public String getRole() {
-        return role;
+        return this.role;
     }
 
     public void setRole(String role) {

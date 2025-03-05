@@ -1,3 +1,4 @@
+
 package com.example.smartrecrute.models;
 
 import java.sql.Timestamp;
@@ -5,11 +6,15 @@ import java.util.List;
 
 public class OffreEmploi {
     private int id;
-
-
+    private String titre;
+    private String description;
+    private Timestamp datePublication;
+    private String entreprise;
+    private int recruteurId;
+    List<Candidature> candidatureList;
 
     public int getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(int id) {
@@ -17,7 +22,7 @@ public class OffreEmploi {
     }
 
     public int getRecruteurId() {
-        return recruteurId;
+        return this.recruteurId;
     }
 
     public void setRecruteurId(int recruteurId) {
@@ -25,7 +30,7 @@ public class OffreEmploi {
     }
 
     public String getEntreprise() {
-        return entreprise;
+        return this.entreprise;
     }
 
     public void setEntreprise(String entreprise) {
@@ -33,7 +38,7 @@ public class OffreEmploi {
     }
 
     public Timestamp getDatePublication() {
-        return datePublication;
+        return this.datePublication;
     }
 
     public void setDatePublication(Timestamp datePublication) {
@@ -41,7 +46,7 @@ public class OffreEmploi {
     }
 
     public String getDescription() {
-        return description;
+        return this.description;
     }
 
     public void setDescription(String description) {
@@ -49,23 +54,15 @@ public class OffreEmploi {
     }
 
     public String getTitre() {
-        return titre;
+        return this.titre;
     }
 
     public void setTitre(String titre) {
         this.titre = titre;
     }
 
-    private String titre;
-    private String description;
-    private Timestamp datePublication;
-    private String entreprise;
-    private int recruteurId;
-
-    List<Candidature> candidatureList;
-
     public List<Candidature> getCandidatureList() {
-        return candidatureList;
+        return this.candidatureList;
     }
 
     public void setCandidatureList(List<Candidature> candidatureList) {
@@ -75,7 +72,7 @@ public class OffreEmploi {
     public OffreEmploi(String titre, String description, String entreprise, int recruteurId) {
         this.titre = titre;
         this.description = description;
-        this.datePublication = datePublication;
+        this.datePublication = this.datePublication;
         this.entreprise = entreprise;
         this.recruteurId = recruteurId;
     }
