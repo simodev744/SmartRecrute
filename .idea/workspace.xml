@@ -10,36 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1793b39-1c67-4381-bdb7-bf36ea3d971a" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CandidatServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CandidaturesServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/CandidatDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/dashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/auth/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/createCandidat.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/dashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/listCandidats.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/viewCandidat.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/recruteur/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SmartRecrute_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/WEB-INF/classes/com/example/smartrecrute/controllers/CandidatServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/WEB-INF/classes/com/example/smartrecrute/controllers/CandidatServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/WEB-INF/classes/com/example/smartrecrute/daos/CandidatDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/WEB-INF/classes/com/example/smartrecrute/daos/CandidatDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/WEB-INF/classes/com/example/smartrecrute/models/Candidat.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/WEB-INF/classes/com/example/smartrecrute/models/Candidat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/candidat/createCandidat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/candidat/createCandidat.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/connection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/connection/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/AdminServlets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/AdminServlets.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/AuthServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CondidatServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CondidaturesServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/OffreServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/OffreServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/RecruterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/RecruterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoCandidat.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoRecruter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoRecruter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/filters/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/filters/AuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CandidatServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CandidatServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/CandidatDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/CandidatDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploiCandidature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploiCandidature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Recruteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Recruteur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Utilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/auth/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/auth/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/auth/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/auth/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/createCandidat.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/createCandidat.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/dashboard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +45,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "yassinehaa"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/simodev744/SmartRecrute.git",
+    "accountId": "f9aed71e-6bd6-45c3-9ea2-78a88764eac0"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -89,7 +89,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 11.0.2.executor": "Run",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -195,8 +195,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
       </set>
     </attachedChunks>
   </component>

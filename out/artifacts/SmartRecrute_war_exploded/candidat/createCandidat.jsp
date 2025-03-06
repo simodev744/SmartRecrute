@@ -7,8 +7,12 @@
 <h2>Create New Candidat</h2>
 <form action="candidat" method="post">
     <input type="hidden" name="action" value="create">
+    <label for="nom">Name:</label><br>
+    <input type="text" id="nom" name="nom" required><br><br>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
     <label for="utilisateur_id">Utilisateur ID:</label><br>
-    <input type="number" id="utilisateur_id" name="utilisateur_id" required><br><br>
+    <input type="number" id="utilisateur_id" value="" name="utilisateur_id" required><br><br>
     <label for="cv">CV:</label><br>
     <textarea id="cv" name="cv" rows="4" cols="50" required></textarea><br><br>
     <input type="submit" value="Create">

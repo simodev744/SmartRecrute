@@ -14,81 +14,74 @@ public class CandidatDAO {
         this.connection = DBConnection.getConnection();
     }
 
-    public boolean create(Candidat candidat) {
-        String query = "INSERT INTO candidats (utilisateur_id, cv) VALUES (?, ?)";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, candidat.getUtilisateurId());
-            statement.setString(2, candidat.getCv());
-            return statement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
-        }
-    }
-
-
-    public Candidat getById(int id) {
-        String query = "SELECT * FROM candidats WHERE id = ?";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, id);
-            ResultSet resultSet = statement.executeQuery();
-            if (resultSet.next()) {
-                Candidat candidat = new Candidat();
-                candidat.setId(resultSet.getInt("id"));
-                candidat.setUtilisateurId(resultSet.getInt("utilisateur_id"));
-                candidat.setCv(resultSet.getString("cv"));
-                candidat.setDateCreation(resultSet.getTimestamp("date_creation"));
-                return candidat;
+    public Candidat getById(int id) throws SQLException {
+        String sql = "SELECT * FROM candidat WHERE id = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setInt(1, id);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    Candidat candidat = new Candidat();
+                    candidat.setId(resultSet.getInt("id"));
+                    candidat.setNom(resultSet.getString("nom"));
+                    candidat.setEmail(resultSet.getString("email"));
+                    candidat.setUtilisateurId(resultSet.getInt("utilisateur_id"));
+                    candidat.setCv(resultSet.getString("cv"));
+                    candidat.setDateCreation(resultSet.getTimestamp("date_creation"));
+                    return candidat;
+                }
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
         return null;
     }
 
-
-    public List<Candidat> getAll() {
+    public List<Candidat> getAll() throws SQLException {
+        String sql = "SELECT * FROM candidat";
         List<Candidat> candidats = new ArrayList<>();
-        String query = "SELECT * FROM candidats";
-        try (Statement statement = connection.createStatement()) {
-            ResultSet resultSet = statement.executeQuery(query);
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql);
+             ResultSet resultSet = preparedStatement.executeQuery()) {
             while (resultSet.next()) {
                 Candidat candidat = new Candidat();
                 candidat.setId(resultSet.getInt("id"));
+                candidat.setNom(resultSet.getString("nom"));
+                candidat.setEmail(resultSet.getString("email"));
                 candidat.setUtilisateurId(resultSet.getInt("utilisateur_id"));
                 candidat.setCv(resultSet.getString("cv"));
                 candidat.setDateCreation(resultSet.getTimestamp("date_creation"));
                 candidats.add(candidat);
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
         }
         return candidats;
     }
 
-
-    public boolean update(Candidat candidat) {
-        String query = "UPDATE candidats SET utilisateur_id = ?, cv = ? WHERE id = ?";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, candidat.getUtilisateurId());
-            statement.setString(2, candidat.getCv());
-            statement.setInt(3, candidat.getId());
-            return statement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
+    public void create(Candidat candidat) throws SQLException {
+        String sql = "INSERT INTO candidat (nom, email, utilisateur_id, cv, date_creation) VALUES (?, ?, ?, ?, ?)";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, candidat.getNom());
+            preparedStatement.setString(2, candidat.getEmail());
+            preparedStatement.setInt(3, candidat.getUtilisateurId());
+            preparedStatement.setString(4, candidat.getCv());
+            preparedStatement.setTimestamp(5, new Timestamp(System.currentTimeMillis())); // Auto-set creation date
+            preparedStatement.executeUpdate();
         }
     }
 
+    public void update(Candidat candidat) throws SQLException {
+        String sql = "UPDATE candidat SET nom = ?, email = ?, utilisateur_id = ?, cv = ? WHERE id = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, candidat.getNom());
+            preparedStatement.setString(2, candidat.getEmail());
+            preparedStatement.setInt(3, candidat.getUtilisateurId());
+            preparedStatement.setString(4, candidat.getCv());
+            preparedStatement.setInt(5, candidat.getId());
+            preparedStatement.executeUpdate();
+        }
+    }
 
-    public boolean delete(int id) {
-        String query = "DELETE FROM candidats WHERE id = ?";
-        try (PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setInt(1, id);
-            return statement.executeUpdate() > 0;
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false;
+    public void delete(int id) throws SQLException {
+        String sql = "DELETE FROM candidat WHERE id = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setInt(1, id);
+            preparedStatement.executeUpdate();
         }
     }
 }

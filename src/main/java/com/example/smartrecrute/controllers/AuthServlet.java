@@ -15,18 +15,28 @@ import java.sql.SQLException;
 @WebServlet("/auth")
 public class AuthServlet extends HttpServlet {
 
-    private DaoUser daoUser = new DaoUser();
+    private DaoUser daoUser;
+
+    @Override
+    public void init() throws ServletException {
+        try {
+            daoUser = new DaoUser();
+        } catch (Exception e) {
+            throw new ServletException("Failed to initialize DaoUser", e);
+        }
+    }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
 
         if ("login".equals(action)) {
-            System.out.println("it s work");
             request.getRequestDispatcher("/auth/login.jsp").forward(request, response);
         } else if ("register".equals(action)) {
             request.getRequestDispatcher("/auth/register.jsp").forward(request, response);
+        } else if ("logout".equals(action)) { // Handle logout via GET
+            logout(request, response);
         } else {
-            response.sendRedirect("login.jsp");
+            response.sendRedirect(request.getContextPath() + "/auth?action=login");
         }
     }
 
@@ -65,16 +75,16 @@ public class AuthServlet extends HttpServlet {
 
             switch (utilisateur.getRole().toLowerCase()) {
                 case "admin":
-                    response.sendRedirect("admin/dashboard.jsp");
+                    response.sendRedirect(request.getContextPath() + "/admin/dashboard.jsp");
                     break;
                 case "recruteur":
-                    response.sendRedirect("recruteur/dashboard.jsp");
+                    response.sendRedirect(request.getContextPath() + "/recruteur/dashboard.jsp");
                     break;
                 case "candidat":
-                    response.sendRedirect("candidat/dashboard.jsp");
+                    response.sendRedirect(request.getContextPath() + "/candidat/dashboard.jsp");
                     break;
                 default:
-                    response.sendRedirect("dashboard.jsp");
+                    response.sendRedirect(request.getContextPath() + "/dashboard.jsp");
                     break;
             }
         } else {
@@ -105,7 +115,7 @@ public class AuthServlet extends HttpServlet {
 
             Utilisateur utilisateur = new Utilisateur(username, password, email, role);
             if (daoUser.addUser(utilisateur)) {
-                response.sendRedirect("auth?action=login");
+                response.sendRedirect(request.getContextPath() + "/auth?action=login");
             } else {
                 request.setAttribute("error", "Erreur d'inscription.");
                 request.getRequestDispatcher("/auth/register.jsp").forward(request, response);
@@ -120,6 +130,6 @@ public class AuthServlet extends HttpServlet {
         if (session != null) {
             session.invalidate();
         }
-        response.sendRedirect("auth?action=login");
+        response.sendRedirect(request.getContextPath() + "/auth?action=login"); // Use absolute path
     }
 }

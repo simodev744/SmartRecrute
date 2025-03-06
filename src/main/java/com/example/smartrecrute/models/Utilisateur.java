@@ -67,4 +67,8 @@ public class Utilisateur implements Serializable {
     public void setRole(String role) {
         this.role = role;
     }
+
+    public Object getNom() {
+        return null;
+    }
 }

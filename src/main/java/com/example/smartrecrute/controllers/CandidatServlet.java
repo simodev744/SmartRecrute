@@ -2,17 +2,15 @@ package com.example.smartrecrute.controllers;
 
 import com.example.smartrecrute.daos.CandidatDAO;
 import com.example.smartrecrute.models.Candidat;
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.*;
-import java.sql.*;
-import java.util.List;
 
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
 
 @WebServlet("/candidat")
 public class CandidatServlet extends HttpServlet {
@@ -22,10 +20,8 @@ public class CandidatServlet extends HttpServlet {
     public void init() throws ServletException {
         try {
             candidatDAO = new CandidatDAO();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new ServletException("Failed to initialize CandidatDAO", e);
         }
     }
 
@@ -33,21 +29,25 @@ public class CandidatServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
 
-        if (action.equals("create")) {
+        if ("create".equals(action)) {
             request.getRequestDispatcher("/candidat/createCandidat.jsp").forward(request, response);
-
-        }
-
-
-        if ("view".equals(action)) {
+        } else if ("view".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
-            Candidat candidat = candidatDAO.getById(id);
-            request.setAttribute("candidat", candidat);
-            request.getRequestDispatcher("candiat/viewCandidat.jsp").forward(request, response);
+            try {
+                Candidat candidat = candidatDAO.getById(id);
+                request.setAttribute("candidat", candidat);
+                request.getRequestDispatcher("/candidat/viewCandidat.jsp").forward(request, response);
+            } catch (SQLException e) {
+                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error retrieving candidat");
+            }
         } else if ("list".equals(action)) {
-            List<Candidat> candidats = candidatDAO.getAll();
-            request.setAttribute("candidats", candidats);
-             request.getRequestDispatcher("candidat/listCandidats.jsp").forward(request, response);
+            try {
+                List<Candidat> candidats = candidatDAO.getAll();
+                request.setAttribute("candidats", candidats);
+                request.getRequestDispatcher("/candidat/listCandidats.jsp").forward(request, response);
+            } catch (SQLException e) {
+                response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Error retrieving candidats list");
+            }
         }
     }
 
@@ -56,42 +56,40 @@ public class CandidatServlet extends HttpServlet {
         String action = request.getParameter("action");
 
         if ("create".equals(action)) {
-            int utilisateurId = Integer.parseInt(request.getParameter("utilisateur_id"));
-            String cv = request.getParameter("cv");
-
             Candidat candidat = new Candidat();
-            candidat.setUtilisateurId(utilisateurId);
-            candidat.setCv(cv);
+            candidat.setNom(request.getParameter("nom"));
+            candidat.setEmail(request.getParameter("email"));
+            candidat.setUtilisateurId(Integer.parseInt(request.getParameter("utilisateur_id")));
+            candidat.setCv(request.getParameter("cv"));
 
-            boolean result = candidatDAO.create(candidat);
-            if (result) {
+            try {
+                candidatDAO.create(candidat);
                 response.sendRedirect("candidat?action=list");
-            } else {
-                response.getWriter().write("Error creating candidat.");
+            } catch (SQLException e) {
+                response.getWriter().write("Error creating candidat: " + e.getMessage());
             }
         } else if ("update".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
-            int utilisateurId = Integer.parseInt(request.getParameter("utilisateur_id"));
-            String cv = request.getParameter("cv");
-
             Candidat candidat = new Candidat();
             candidat.setId(id);
-            candidat.setUtilisateurId(utilisateurId);
-            candidat.setCv(cv);
+            candidat.setNom(request.getParameter("nom"));
+            candidat.setEmail(request.getParameter("email"));
+            candidat.setUtilisateurId(Integer.parseInt(request.getParameter("utilisateur_id")));
+            candidat.setCv(request.getParameter("cv"));
 
-            boolean result = candidatDAO.update(candidat);
-            if (result) {
+            try {
+                candidatDAO.update(candidat);
                 response.sendRedirect("candidat?action=view&id=" + id);
-            } else {
-                response.getWriter().write("Error updating candidat.");
+            } catch (SQLException e) {
+                response.getWriter().write("Error updating candidat: " + e.getMessage());
             }
         } else if ("delete".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
-            boolean result = candidatDAO.delete(id);
-            if (result) {
+            try {
+                candidatDAO.delete(id);
                 response.sendRedirect("candidat?action=list");
-            } else {
-                response.getWriter().write("Error deleting candidat.");
+            } catch (SQLException e) {
+                response.getWriter().write("Error deleting candidat: " + e.getMessage());
             }
         }
     }
