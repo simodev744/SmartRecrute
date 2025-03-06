@@ -1,2 +1,4 @@
-package com.example.smartrecrute.daos;public class DaoRecruter {
+package com.example.smartrecrute.daos;
+
+public class DaoRecruter {
 }

@@ -1,17 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SmartRecrute:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1793b39-1c67-4381-bdb7-bf36ea3d971a" name="Changes" comment="" />
+    <list default="true" id="f1793b39-1c67-4381-bdb7-bf36ea3d971a" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CandidatServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CandidaturesServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/CandidatDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/dashboard.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/auth/login.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/createCandidat.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/dashboard.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/listCandidats.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/candidat/viewCandidat.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/recruteur/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/connection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/connection/DBConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/AdminServlets.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/AdminServlets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/AuthServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CondidatServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/CondidaturesServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/OffreServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/OffreServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/RecruterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/RecruterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoCandidat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoRecruter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoRecruter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/filters/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/filters/AuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploiCandidature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploiCandidature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Recruteur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Recruteur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Utilisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/auth/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/auth/register.jsp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -20,9 +75,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2tqlZXJ9VK0cHPin6Y3NyIPSlBZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -32,14 +87,25 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Tomcat Server.Tomcat 11.0.2.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="Tomcat 11.0.2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.2" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="SmartRecrute:war exploded">
           <settings>
@@ -47,12 +113,77 @@
           </settings>
         </artifact>
       </deployment>
-      <server-settings />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="2f459294-557a-48c1-a61e-f64416653ffe" />
+      </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="61089" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
@@ -77,11 +208,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741087544851</updated>
-      <workItem from="1741087545986" duration="2000" />
+      <workItem from="1741087545986" duration="262000" />
+      <workItem from="1741087822048" duration="12028000" />
+      <workItem from="1741177177721" duration="8037000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1741087652850</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741087652850</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
   </component>
 </project>

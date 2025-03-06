@@ -1,5 +1,6 @@
 package com.example.smartrecrute.daos;
 
+import com.example.smartrecrute.connection.DBConnection;
 import com.example.smartrecrute.models.Candidat;
 
 import java.sql.*;
@@ -9,10 +10,9 @@ import java.util.List;
 public class CandidatDAO {
     private Connection connection;
 
-    public CandidatDAO(Connection connection) {
-        this.connection = connection;
+    public CandidatDAO() throws SQLException, ClassNotFoundException {
+        this.connection = DBConnection.getConnection();
     }
-
 
     public boolean create(Candidat candidat) {
         String query = "INSERT INTO candidats (utilisateur_id, cv) VALUES (?, ?)";
