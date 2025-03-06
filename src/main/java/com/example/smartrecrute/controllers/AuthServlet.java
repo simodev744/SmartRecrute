@@ -11,17 +11,18 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.logging.Logger;
 
 @WebServlet("/auth")
 public class AuthServlet extends HttpServlet {
-
+    private static final Logger LOGGER = Logger.getLogger(AuthServlet.class.getName());
     private DaoUser daoUser;
 
     @Override
     public void init() throws ServletException {
         try {
             daoUser = new DaoUser();
-        } catch (Exception e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new ServletException("Failed to initialize DaoUser", e);
         }
     }
@@ -33,7 +34,7 @@ public class AuthServlet extends HttpServlet {
             request.getRequestDispatcher("/auth/login.jsp").forward(request, response);
         } else if ("register".equals(action)) {
             request.getRequestDispatcher("/auth/register.jsp").forward(request, response);
-        } else if ("logout".equals(action)) { // Handle logout via GET
+        } else if ("logout".equals(action)) {
             logout(request, response);
         } else {
             response.sendRedirect(request.getContextPath() + "/auth?action=login");
@@ -72,13 +73,14 @@ public class AuthServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("utilisateur", utilisateur);
             session.setMaxInactiveInterval(30 * 60); // 30 minutes
+            LOGGER.info("User logged in: " + utilisateur.getEmail());
 
             switch (utilisateur.getRole().toLowerCase()) {
                 case "admin":
                     response.sendRedirect(request.getContextPath() + "/admin/dashboard.jsp");
                     break;
                 case "recruteur":
-                    response.sendRedirect(request.getContextPath() + "/recruteur/dashboard.jsp");
+                    response.sendRedirect(request.getContextPath() + "/recruteur?action=list");
                     break;
                 case "candidat":
                     response.sendRedirect(request.getContextPath() + "/candidat/dashboard.jsp");
@@ -93,11 +95,13 @@ public class AuthServlet extends HttpServlet {
         }
     }
 
-    private void register(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    private void register(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String role = request.getParameter("role");
+
+        LOGGER.info("Register attempt: username=" + username + ", email=" + email + ", role=" + role);
 
         if (username == null || email == null || password == null || role == null ||
                 username.isEmpty() || email.isEmpty() || password.isEmpty() || role.isEmpty()) {
@@ -113,14 +117,16 @@ public class AuthServlet extends HttpServlet {
                 return;
             }
 
-            Utilisateur utilisateur = new Utilisateur(username, password, email, role);
+            Utilisateur utilisateur = new Utilisateur(0, username, password, email, role, null);
             if (daoUser.addUser(utilisateur)) {
+                LOGGER.info("User registered successfully: " + email);
                 response.sendRedirect(request.getContextPath() + "/auth?action=login");
             } else {
                 request.setAttribute("error", "Erreur d'inscription.");
                 request.getRequestDispatcher("/auth/register.jsp").forward(request, response);
             }
         } catch (SQLException | ClassNotFoundException e) {
+            LOGGER.severe("Registration failed: " + e.getMessage());
             throw new ServletException("Erreur d'inscription.", e);
         }
     }
@@ -130,6 +136,6 @@ public class AuthServlet extends HttpServlet {
         if (session != null) {
             session.invalidate();
         }
-        response.sendRedirect(request.getContextPath() + "/auth?action=login"); // Use absolute path
+        response.sendRedirect(request.getContextPath() + "/auth?action=login");
     }
 }

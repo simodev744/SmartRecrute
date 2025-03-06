@@ -30,7 +30,7 @@ public class CandidatServlet extends HttpServlet {
         String action = request.getParameter("action");
 
         if ("create".equals(action)) {
-            request.getRequestDispatcher("/candidat/createCandidat.jsp").forward(request, response);
+            request.getRequestDispatcher("/auth/register.jsp").forward(request, response);
         } else if ("view".equals(action)) {
             int id = Integer.parseInt(request.getParameter("id"));
             try {

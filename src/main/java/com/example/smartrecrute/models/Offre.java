@@ -2,68 +2,32 @@ package com.example.smartrecrute.models;
 
 import java.sql.Timestamp;
 
-public class OffreEmploi {
+public class Offre {
     private int id;
     private String titre;
     private String description;
-    private Timestamp datePublication;
-    private String entreprise;
     private int recruteurId;
+    private Timestamp dateCreation;
 
-    public OffreEmploi(int id, String titre, String description, Timestamp datePublication, String entreprise, int recruteurId) {
+    // Constructors
+    public Offre() {}
+    public Offre(int id, String titre, String description, int recruteurId, Timestamp dateCreation) {
         this.id = id;
         this.titre = titre;
         this.description = description;
-        this.datePublication = datePublication;
-        this.entreprise = entreprise;
         this.recruteurId = recruteurId;
+        this.dateCreation = dateCreation;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getTitre() {
-        return titre;
-    }
-
-    public void setTitre(String titre) {
-        this.titre = titre;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Timestamp getDatePublication() {
-        return datePublication;
-    }
-
-    public void setDatePublication(Timestamp datePublication) {
-        this.datePublication = datePublication;
-    }
-
-    public String getEntreprise() {
-        return entreprise;
-    }
-
-    public void setEntreprise(String entreprise) {
-        this.entreprise = entreprise;
-    }
-
-    public int getRecruteurId() {
-        return recruteurId;
-    }
-
-    public void setRecruteurId(int recruteurId) {
-        this.recruteurId = recruteurId;
-    }
+    // Getters and Setters
+    public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+    public String getTitre() { return titre; }
+    public void setTitre(String titre) { this.titre = titre; }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+    public int getRecruteurId() { return recruteurId; }
+    public void setRecruteurId(int recruteurId) { this.recruteurId = recruteurId; }
+    public Timestamp getDateCreation() { return dateCreation; }
+    public void setDateCreation(Timestamp dateCreation) { this.dateCreation = dateCreation; }
 }

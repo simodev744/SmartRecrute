@@ -1,10 +1,18 @@
 package com.example.smartrecrute.daos;
 
-import java.sql.*;
 import com.example.smartrecrute.connection.DBConnection;
 import com.example.smartrecrute.models.Utilisateur;
 
+import java.sql.*;
+import java.util.logging.Logger;
+
 public class DaoUser {
+    private static final Logger LOGGER = Logger.getLogger(DaoUser.class.getName());
+    private Connection connection;
+
+    public DaoUser() throws SQLException, ClassNotFoundException {
+        this.connection = DBConnection.getConnection();
+    }
 
     // Retrieve a user by ID
     public Utilisateur getUserById(int userId) throws SQLException, ClassNotFoundException {
@@ -31,6 +39,10 @@ public class DaoUser {
 
     // Add a new user
     public boolean addUser(Utilisateur utilisateur) throws SQLException {
+        if (utilisateur.getNomUtilisateur() == null || utilisateur.getNomUtilisateur().isEmpty()) {
+            LOGGER.severe("Attempted to add user with null or empty nom_utilisateur");
+            throw new SQLException("Nom_utilisateur cannot be null or empty");
+        }
         String query = "INSERT INTO utilisateurs (nom_utilisateur, email, mot_de_passe, role) VALUES (?, ?, SHA2(?, 256), ?)";
         try (Connection connection = DBConnection.getConnection();
              PreparedStatement statement = connection.prepareStatement(query)) {
@@ -40,8 +52,11 @@ public class DaoUser {
             statement.setString(3, utilisateur.getMotDePasse());
             statement.setString(4, utilisateur.getRole());
 
-            return statement.executeUpdate() > 0;
+            int rowsAffected = statement.executeUpdate();
+            LOGGER.info("User added: " + utilisateur.getEmail());
+            return rowsAffected > 0;
         } catch (ClassNotFoundException e) {
+            LOGGER.severe("ClassNotFoundException: " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -65,7 +80,7 @@ public class DaoUser {
              PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, email);
-            statement.setString(2, password); // Assuming the password is already hashed before passing it
+            statement.setString(2, password);
 
             ResultSet resultSet = statement.executeQuery();
 
@@ -79,8 +94,7 @@ public class DaoUser {
                         resultSet.getTimestamp("date_creation")
                 );
             }
-            return null; // No matching user found
+            return null;
         }
     }
-
 }
