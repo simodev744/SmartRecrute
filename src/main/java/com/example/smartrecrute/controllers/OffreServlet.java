@@ -1,2 +1,4 @@
-package com.example.smartrecrute.controllers;public class OffreServlet {
+package com.example.smartrecrute.controllers;
+
+public class OffreServlet {
 }

@@ -1,16 +1,19 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Med
-  Date: 3/5/2025
-  Time: 1:39 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  $END$
-  </body>
+<head>
+    <title>Create Candidat</title>
+</head>
+<body>
+<h2>Create New Candidat</h2>
+<form action="candidat" method="post">
+    <input type="hidden" name="action" value="create">
+    <label for="utilisateur_id">Utilisateur ID:</label><br>
+    <input type="number" id="utilisateur_id" value="" name="utilisateur_id" required><br><br>
+    <label for="cv">CV:</label><br>
+    <textarea id="cv" name="cv" rows="4" cols="50" required></textarea><br><br>
+    <input type="submit" value="Create">
+</form>
+<br>
+<a href="candidat?action=list">Back to List</a>
+</body>
 </html>
