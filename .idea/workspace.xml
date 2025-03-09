@@ -10,30 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1793b39-1c67-4381-bdb7-bf36ea3d971a" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/upload/PdfUploadServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/candidaturesConfirmation.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/includes/navbar.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/listCandidat.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/admin/offresConfirmation.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connection/DBConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/connection/DBConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/connection/DBConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/auth/AuthServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/auth/AuthServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/candidat/CandidatServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/candidat/CandidatServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SmartRecrute_war_exploded/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/recruteur/RecruteurServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/controllers/recruteur/RecruteurServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoCandidat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoCandidat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/DaoUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/RecruteurDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/daos/RecruteurDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Candidature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/OffreEmploi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Utilisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/smartrecrute/models/Utilisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/admin/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/admin/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/dashboard.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/editProfile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/editProfile.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/includes/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/includes/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/listCandidatures.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/listCandidatures.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/listOffres.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/listOffres.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/candidat/profile.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/candidat/profile.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/recruteur/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/recruteur/dashboard.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +36,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "yassinehaa"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/simodev744/SmartRecrute.git",
+    "accountId": "19cf1b11-d450-4caf-b2bc-7179407b3203"
+  }
+}]]></component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
@@ -83,11 +78,12 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Tomcat Server.Tomcat 11.0.2.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/MCOMPUTER/Desktop/SmartRecrute/src/main/webapp/admin",
+    "last_opened_file_path": "/Users/mac/SmartRecrute",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -118,7 +114,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Tomcat 11.0.2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.2" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 11.0.2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.3" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/SmartRecrute_war_exploded/auth?action=login" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -210,8 +206,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.189" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.189" />
       </set>
     </attachedChunks>
   </component>
@@ -233,6 +229,7 @@
       <workItem from="1741029125344" duration="3736000" />
       <workItem from="1741036010111" duration="21897000" />
       <workItem from="1741338746377" duration="7196000" />
+      <workItem from="1741553952510" duration="2905000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
